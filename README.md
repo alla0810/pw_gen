@@ -5,12 +5,9 @@
   * Deployed URL: https://alla0810.github.io/pw_gen/
   * GitHub: https://github.com/alla0810/pw_gen
   * screenshot
-![screen1](./assets/images/screen1.png)
 ![screen2](./assets/images/screen2.png)
-![screen3](./assets/images/screen3.png)
 ![screen4](./assets/images/screen4.png)
 ![screen5](./assets/images/screen5.png)
-![screen6](./assets/images/screen6.png)
 
 ## Source Code References
   This project has used some reference codes from the following sites
