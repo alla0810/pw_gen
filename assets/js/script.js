@@ -8,13 +8,13 @@ function generatePassword()
 
   if (length <8 || length > 128)
   {
-    return "Error: Length should be (8-128)";
+    return "Error: Length should be (8-128)\n Input Length = " + length;    
   }
 
-  const numbers = confirm("Do you want to include numeric characters? (Yes-OK, No-Cancel)");
-  const uppercase = confirm("Do you want to include uppercase characters? (Yes-OK, No-Cancel)");
-  const lowercase = confirm("Do you want include lowercase characters? (Yes-OK, No-Cancel)");
-  const specials = confirm("Do you want to include special characters? (Yes-OK, No-Cancel)");
+  const numbers = confirm("Do you want to include numeric characters? (Yes:OK, No:Cancel)");
+  const uppercase = confirm("Do you want to include uppercase characters? (Yes:OK, No:Cancel)");
+  const lowercase = confirm("Do you want include lowercase characters? (Yes:OK, No:Cancel)");
+  const specials = confirm("Do you want to include special characters? (Yes:OK, No:Cancel)");
 
   /**********************************/
   /*  Validate the input variables  */

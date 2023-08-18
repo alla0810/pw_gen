@@ -5,9 +5,12 @@
   * Deployed URL: https://alla0810.github.io/pw_gen/
   * GitHub: https://github.com/alla0810/pw_gen
   * screenshot
-
-
-
+![screen1](./assets/images/screen1.png)
+![screen2](./assets/images/screen2.png)
+![screen3](./assets/images/screen3.png)
+![screen4](./assets/images/screen4.png)
+![screen5](./assets/images/screen5.png)
+![screen6](./assets/images/screen6.png)
 
 ## Source Code References
   This project has used some reference codes from the following sites
@@ -15,6 +18,8 @@
    * https://www.youtube.com/watch?v=m5XF1OQ6rSg   
 
    * https://git.bootcampcontent.com/University-of-Texas-at-Austin/UTA-VIRT-FSF-PT-07-2023-U-LOLC.git   
+
+   * https://www.tutorialsteacher.com/javascript/display-popup-message-in-javascript
 
 ## User Story
 
@@ -43,7 +48,7 @@ GIVEN I need a new, secure password
 ## Mock-Up
 The following image shows the web application's appearance and functionality
 
-![appearance](./Develop/assets/images/03-javascript-homework-demo.png)
+![appearance](./assets/images/03-javascript-homework-demo.png)
 
 ## Technical Acceptance Criteria: 40%
 
