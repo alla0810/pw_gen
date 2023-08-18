@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="password-form">
+        <label for="length">Password Length:</label><br>
+        <input type="number" id="length" name="length" value="10"><br>
+        <input type="checkbox" id="numbers" name="numbers" checked>
+        <label for="numbers">Include Numbers</label><br>
+        <input type="checkbox" id="uppercase" name="uppercase" checked>
+        <label for="uppercase">Include Uppercase Characters</label><br>
+        <input type="checkbox" id="lowercase" name="lowercase" checked>
+        <label for="lowercase">Include Lowercase Characters</label><br>
+        <input type="checkbox" id="no-duplicates" name="no-duplicates">
+        <label for="no-duplicates">Exclude Duplicate Characters</label><br>
+        <input type="checkbox" id="symbols" name="symbols">
+        <label for="symbols">Include Symbols</label><br>
+        <button type="button" onclick="generate()">Generate Password</button>
+    </form>
+
+    <br>
+    <p id="output"></p>
+
+
+    <script>
+        function generate()
+        {
+            // get the references of all the inputs
+            const length = document.getElementById("length").value;
+            const numbers = document.getElementById("numbers").checked;
+            const uppercase = document.getElementById("uppercase").checked;
+            const lowercase = document.getElementById("lowercase").checked;
+            const noDuplicates = document.getElementById("no-duplicates").checked;
+            const symbols = document.getElementById("symbols").checked;
+            // generate the random password
+            const password = generatePassword(parseInt(length), numbers, uppercase, lowercase, symbols, noDuplicates)
+
+            // show the password
+
+            document.getElementById('output').innerHTML = password
+
+        }
+
+
+
+        function generatePassword(length, numbers, uppercase, lowercase, symbols, noDuplicates)
+        {
+            let characters = '';
+
+            if (numbers)
+            {
+                characters += '0123456789'
+            }
+
+            if (uppercase)
+            {
+                characters += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+            }
+
+            if (lowercase)
+            {
+                characters += 'abcdefghijklmnopqrstuvwxyz'
+            }
+
+            if (symbols)
+            {
+                characters += '!@#$%^&*'
+            }
+
+            let passwordArray = [];
+
+            while(passwordArray.length < length)
+            {
+                const character = characters[Math.floor(Math.random() * characters.length)];
+
+                if (!noDuplicates || !passwordArray.includes(character))
+                {
+                    passwordArray.push(character)
+                }                
+            }
+
+            return passwordArray.join('');
+        }
+    </script>
+</body>
+</html>
